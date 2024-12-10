@@ -2,7 +2,7 @@
 title: My Awesome Website
 description: A brief description of my website.
 baseurl: "" # Leave blank unless the site is in a subdirectory
-url: "https://<your-username>.github.io" # Replace with your actual GitHub Pages URL
+url: "https://akkapakakarthik.github.io/" # Replace with your actual GitHub Pages URL
 
 # Build settings
 theme: minima # Default Jekyll theme; you can change it
