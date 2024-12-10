@@ -1,0 +1,22 @@
+# Site settings
+title: My Awesome Website
+description: A brief description of my website.
+baseurl: "" # Leave blank unless the site is in a subdirectory
+url: "https://<your-username>.github.io" # Replace with your actual GitHub Pages URL
+
+# Build settings
+theme: minima # Default Jekyll theme; you can change it
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files or folders from the build
+exclude:
+  - README.md
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
