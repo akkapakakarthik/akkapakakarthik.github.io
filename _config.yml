@@ -5,7 +5,7 @@ baseurl: "" # Leave blank unless the site is in a subdirectory
 url: "https://akkapakakarthik.github.io/" # Replace with your actual GitHub Pages URL
 
 # Build settings
-theme: minima # Default Jekyll theme; you can change it
+theme: jekyll-theme-minimal # Default Jekyll theme; you can change it
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
