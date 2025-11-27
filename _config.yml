@@ -18,16 +18,25 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Akkapaka Karthik
+email: 
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# 1. Full public URL, with HTTPS. Used by absolute_url filter.
+# url: "https://akkapakakarthik.github.io" 
+
+# 2. Base path for User/Organization Pages (repo named username.github.io)
+# MUST be an empty string for your setup.
+baseurl: "" 
+
+# 3. Add the 'jekyll-feed' plugin (usually present by default, but check)
+plugins:
+  - jekyll-feed
+  
+twitter_username: 
+github_username:  
 
 # Build settings
 theme: minima
