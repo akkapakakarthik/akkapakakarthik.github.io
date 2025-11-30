@@ -1,15 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
+<head>
+  {% include head.html %}
+  <!-- apply saved theme immediately to avoid flash -->
+  <script>
+    (function(){
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark') document.documentElement.classList.add('theme-dark');
+        else if (saved === 'light') document.documentElement.classList.remove('theme-dark');
+      } catch(e){}  
+    })();
+  </script>
+</head>
+<body class="theme-light">
+  {% include topnav.html %}
 
-{% include head.html %}
-{% include sidebar.html %}
-  <body>
-
-    {% include sidebar.html %}
-
-    <div class="content container">
+  <main id="main" class="app-main" role="main" tabindex="-1">
+    <div class="container">
       {{ content }}
     </div>
+  </main>
 
-  </body>
+  {% include footer.html %}
+
+  <!-- topnav behaviour + theme wiring -->
+<script>
+(function(){
+  var body = document.body;
+  var doc = document.documentElement;
+  var themeBtn = document.getElementById('topThemeToggle'); // menu pill
+  var themeIcon = document.getElementById('topThemeIcon'); // top-right icon
+  var themeLabel = themeBtn && themeBtn.querySelector('.top-theme-label');
+
+  function setThemeClass(mode){
+    if(mode === 'dark'){
+      doc.setAttribute('data-theme','dark');
+      doc.classList.add('theme-dark');
+      body.classList.add('theme-dark');
+      body.classList.remove('theme-light');
+      localStorage.setItem('theme','dark');
+    } else {
+      doc.setAttribute('data-theme','light');
+      doc.classList.remove('theme-dark');
+      body.classList.remove('theme-dark');
+      body.classList.add('theme-light');
+      localStorage.setItem('theme','light');
+    }
+    // accessibility states
+    if(themeLabel) themeLabel.textContent = body.classList.contains('theme-dark') ? 'Light' : 'Dark';
+    if(themeBtn) themeBtn.setAttribute('aria-pressed', body.classList.contains('theme-dark') ? 'true' : 'false');
+    if(themeIcon) themeIcon.setAttribute('aria-pressed', body.classList.contains('theme-dark') ? 'true' : 'false');
+  }
+
+  // apply saved theme ASAP (already applied on <html> by inline script in head, but sync here)
+  try {
+    var saved = localStorage.getItem('theme');
+    if(saved) setThemeClass(saved);
+    else {
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setThemeClass(prefersDark ? 'dark' : 'light');
+    }
+  } catch(e){}
+
+  // toggle handlers
+  if(themeBtn){
+    themeBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      setThemeClass(body.classList.contains('theme-dark') ? 'light' : 'dark');
+    });
+  }
+  if(themeIcon){
+    themeIcon.addEventListener('click', function(e){
+      e.preventDefault();
+      setThemeClass(body.classList.contains('theme-dark') ? 'light' : 'dark');
+      // add a quick pulse class for extra micro-interaction
+      themeIcon.classList.remove('icon-pulse');
+      void themeIcon.offsetWidth;
+      themeIcon.classList.add('icon-pulse');
+    });
+  }
+
+  // sync label on load
+  if(themeLabel) themeLabel.textContent = body.classList.contains('theme-dark') ? 'Light' : 'Dark';
+})();
+</script>
+
+</body>
 </html>

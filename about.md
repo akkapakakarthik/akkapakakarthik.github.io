@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Goals
+layout: default
+title: About
 permalink: /about/
 ---
 

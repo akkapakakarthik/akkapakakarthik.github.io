@@ -1,0 +1,37 @@
+<!-- _includes/topnav.html -->
+<header class="topnav" role="banner">
+  <div class="topnav-inner container">
+    <div class="brand-row">
+      <button id="topNavToggle" class="topnav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnavMenu">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" fill="currentColor"/></svg>
+      </button>
+
+      <a class="brand" href="{{ '/' | relative_url }}">
+        {{ site.title }}
+      </a>
+    </div>
+
+    <nav id="topnavMenu" class="topnav-menu" role="navigation" aria-label="Main navigation">
+      <a class="top-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+      <a class="top-link{% if page.url == '/about/' or page.url == '/about.html' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="top-link{% if page.url contains '/blog' %} active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a>
+    </nav>
+
+<!-- _includes/topnav.html (excerpt showing theme icon area) -->
+    <!-- Small inline theme icon (always visible): stacked sun + moon for crossfade animation -->
+    <button id="topThemeIcon" class="top-theme-icon" aria-label="Toggle theme" title="Toggle theme" aria-pressed="false">
+      <svg class="theme-svg theme-sun" viewBox="0 0 24 24" aria-hidden="true">
+        <g fill="currentColor">
+          <circle cx="12" cy="12" r="4"/>
+          <g>
+            <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </g>
+        </g>
+      </svg>
+
+      <svg class="theme-svg theme-moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>

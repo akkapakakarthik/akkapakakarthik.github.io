@@ -1,0 +1,221 @@
+/* Topnav optimized styles: compact, responsive, accessible */
+.topnav {
+  background: var(--sidebar-bg, #f5f6f7);
+  border-bottom: 1px solid var(--border, #e6e9eb);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.topnav-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+  padding: 10px 16px;
+}
+
+/* Brand + hamburger */
+.brand-row { display:flex; align-items:center; gap:12px; }
+.brand { font-weight:700; color:var(--text); text-decoration:none; font-size:1.05rem; }
+
+/* Hamburger (only visible on small screens) */
+.topnav-hamburger { display:none; border:0; background:transparent; padding:6px; border-radius:8px; cursor:pointer; }
+.topnav-hamburger .icon { width:22px; height:22px; color:var(--muted); }
+
+/* Menu links */
+.topnav-menu { display:flex; align-items:center; gap:12px; }
+.top-link {
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:600;
+}
+.top-link:hover, .top-link:focus { color:var(--text); background: rgba(0,0,0,0.04); }
+.top-link.active { color: var(--accent); background: rgba(237, 100, 100, 0.06); }
+
+/* theme button */
+.top-theme-btn {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding:8px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+/* Responsive: collapse menu into a vertical panel on small screens */
+@media (max-width: 767px) {
+  .topnav-hamburger { display:inline-flex; }
+  .topnav-menu {
+    position: fixed;
+    top: var(--header-height, 56px);
+    right: 0;
+    left: 0;
+    background: var(--sidebar-bg);
+    flex-direction: column;
+    padding: 12px;
+    gap: 6px;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+    box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .topnav-menu.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .top-link { width:100%; padding:12px; text-align:left; }
+  .top-theme-btn { width:100%; }
+}
+
+/* -----------------------
+  Theme & icon animation
+  - dark accent: #23D5D5
+------------------------*/
+
+/* Important cyan chosen by you */
+:root {
+  --cyan: #23D5D5;
+  --accent: var(--cyan);
+}
+
+/* Light theme defaults (already defined earlier) should keep header light and readable.
+   Ensure header uses light background and dark text in light mode */
+.topnav {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+  color: var(--text);
+  border-bottom-color: var(--border);
+}
+
+/* Dark theme variables */
+html[data-theme="dark"], body.theme-dark {
+  --bg: #03161a;         /* deep near-black / blue */
+  --text: #e6fbff;       /* soft off-white */
+  --muted: #9ad6d6;      /* muted cyan */
+  --accent: #23D5D5;     /* your cyan */
+  --border: #07363a;
+  --sidebar-bg: #022426;
+}
+
+/* Apply global background + text */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Header contrast:
+   - Light mode: dark text on light header (default)
+   - Dark mode: darker header but keep brand/text readable; key actions use cyan */
+html[data-theme="dark"] .topnav {
+  background: linear-gradient(180deg, rgba(2,36,38,0.9), rgba(2,36,38,0.88));
+  border-bottom-color: var(--border);
+  color: var(--text);
+}
+
+/* Top links: active/highlight styles: important text uses cyan only */
+.top-link.active {
+  color: var(--accent);
+  background: rgba(35,213,213,0.08);
+}
+.top-link:hover {
+  color: var(--accent);
+}
+
+/* ---------- 1) Sun color in light mode (visible) ---------- */
+
+/* Light-mode sun color (warm orange) */
+html[data-theme="light"] .theme-sun,
+body:not(.theme-dark) .theme-sun {
+  color: #f97316; /* orange-500 — visible on light backgrounds */
+  opacity: 1;
+  transition: color 200ms ease;
+}
+
+/* Keep moon neutral in light mode */
+html[data-theme="light"] .theme-moon,
+body:not(.theme-dark) .theme-moon {
+  color: var(--muted);
+  opacity: 0.0;
+  transform: translateY(-6px) scale(.9);
+}
+
+/* Ensure the top-theme-icon background stays readable in light mode on hover/focus */
+.top-theme-icon:hover,
+.top-theme-icon:focus {
+  background: rgba(0,0,0,0.04);
+}
+
+/* ---------- 2) Footer: remove links on desktop + compact mobile ---------- */
+
+/* Hide the right-side footer links on wider screens (desktop) */
+@media (min-width: 768px) {
+  .footer-right { display: none !important; }
+  .site-footer .container { padding: 12px 0; } /* tighten footer padding on desktop */
+}
+
+/* Mobile: keep a small stacked link list but reduce size/spacing */
+@media (max-width: 767px) {
+  .site-footer .container { flex-direction: column; gap: 6px; padding: 10px 12px; }
+  .footer-right a { display: inline-block; font-size: 13px; color: var(--muted); padding: 6px 8px; }
+  .footer-left { font-size: 13px; color: var(--muted); }
+}
+
+/* If you used inline styles in the footer, ensure the class selectors are present:
+   - wrap the right links with class="footer-right"
+   - the left text with class="footer-left"
+   Example (footer html):
+   <div class="footer-left">…</div>
+   <div class="footer-right"> <a>Home</a> <a>About</a> ... </div>
+
+
+/* Theme icon styles: stacked sun + moon cross-fade */
+.top-theme-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  position:relative;
+  padding:6px;
+  transition: background-color 180ms ease, transform 220ms ease;
+}
+.top-theme-icon:focus { outline: 2px solid rgba(35,213,213,0.16); }
+
+/* SVG stack styles */
+.theme-svg { position:absolute; width:20px; height:20px; color:var(--muted); transition: opacity 260ms ease, transform 260ms ease; transform-origin:center center; }
+.theme-sun { opacity:1; transform: translateY(0) scale(1); }
+.theme-moon { opacity:0; transform: translateY(-6px) scale(.9); }
+
+/* When dark theme active, show moon and tint icon with cyan */
+html[data-theme="dark"] .theme-sun { opacity:0; transform: translateY(6px) scale(.9); }
+html[data-theme="dark"] .theme-moon { opacity:1; transform: translateY(0) scale(1); color: var(--accent); }
+
+/* micro-interaction pulse */
+.top-theme-icon.icon-pulse { transform: scale(1.06); transition: transform 160ms ease; }
+
+/* ensure color of svg is correct in both themes */
+.theme-sun, .theme-moon { color: var(--muted); }
+html[data-theme="dark"] .theme-sun, html[data-theme="dark"] .theme-moon { color: var(--muted); }
+
+/* highlight icon when aria-pressed true to show active state */
+.top-theme-icon[aria-pressed="true"] { background: rgba(35,213,213,0.06); }
+
+/* Important text cyan usage — override key elements in dark */
+html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] .important, html[data-theme="dark"] .top-link.active {
+  color: var(--accent);
+}
+
+/* keep general body text soft off-white (no cyan everywhere) */
+html[data-theme="dark"] p, html[data-theme="dark"] li, html[data-theme="dark"] .content, html[data-theme="dark"] .app-main {
+  color: var(--text);
+}
+
+/* small transition across theme changes */
+* { transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease; }
