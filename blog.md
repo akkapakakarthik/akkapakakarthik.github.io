@@ -8,6 +8,7 @@ permalink: /blog/
   <h1>Blog</h1>
 
   <p>
-    I don’t have posts here yet, but I will start writing soon.
+    I don’t have posts here yet, but I will start writing soon. 
   </p>
+  <p> Intern blog coming soon, stay tuned lmao. </p>
 </section>

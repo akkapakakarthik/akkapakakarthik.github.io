@@ -5,18 +5,12 @@ permalink: /about/
 ---
 
 <section class="card">
+  <h1>ABOUT ME </h1>
   <p>
-    I’m a third year EE undergrad at IITB. This is an experimental site where I wish to document my life.
+    I’m a third year EE undergrad at IITB. This is an experimental site where I wish to document my life which might turn into my portfolio later.
   </p>
-
-  <p>
-    <!-- Right now, I’m mostly writing and taking notes elsewhere. You can find my longer
-    posts and thoughts on my blog:
-  </p>
-
-  <p>
-    <a href="https://your-blog-url-here.com" target="_blank" rel="noopener" class="primary">
-      Visit my blog 
-    </a> -->
-  </p>
+  <h3> Interests </h3>
+    <p> 
+    I am a fitness enthusiast, with swimming and running as my to go activities. I listen to a lot of music (like 60k mins an year), mostly alt rock and pop.  
+    </p>
 </section>

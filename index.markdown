@@ -15,21 +15,6 @@ title: Home
         <a href="{{ '/about/' | relative_url }}" class="primary">About me</a>
         <a href="{{ '/blog/' | relative_url }}" class="ghost">Blog</a>
       </div>
-      <p> Yap </p>  
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-      <p> Yap </p>
-
-
     </div>
   </div>
 </section>
