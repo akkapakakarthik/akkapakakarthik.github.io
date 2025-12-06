@@ -18,6 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+enable_progressbar: true
+
+
 title: Akkapaka Karthik
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
@@ -37,6 +40,8 @@ plugins:
   
 twitter_username: 
 github_username:  
+
+
 
 # Build settings
 theme: minima
