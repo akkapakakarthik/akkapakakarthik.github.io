@@ -10,7 +10,7 @@ tags: []
 
 # Summer Internship Blog
 
-I received my offer letter today so I found it fitting to write a blog post before the intern taints my view of the company lol. It was about 8 months ago I got selected for a Systems Intern at Qualcomm. It was a wild ride (not so much) to get there.
+<!-- I received my offer letter today so I found it fitting to write a blog post before the intern taints my view of the company lol. It was about 8 months ago I got selected for a Systems Intern at Qualcomm. It was a wild ride (not so much) to get there. -->
 
 If you are reading this, either you are really tensed about the intern season or are really bored and have nothing else to do. I remember reading blogs in the summer before my second year and was relieved to find some relatable people. I hope you find a similar kind of relief reading this, maybe calm your nerves a bit or at the very least, be a fun read :)
 
