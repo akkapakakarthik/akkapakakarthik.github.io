@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: default
 title: "Summer Internship Blog"
 subtitle: "My five cents on intern season"
 date: 2026-01-08
-last_modified_at: 2026-04-12
+last_modified_at: 2026-01-12
 categories: [acads]
 tags: []
 ---
@@ -12,14 +12,14 @@ tags: []
 
 <!-- I received my offer letter today so I found it fitting to write a blog post before the intern taints my view of the company lol. It was about 8 months ago I got selected for a Systems Intern at Qualcomm. It was a wild ride (not so much) to get there. -->
 
-If you are reading this, either you are really tensed about the intern season or are really bored and have nothing else to do. I remember reading blogs in the summer before my second year and was relieved to find some relatable people. I hope you find a similar kind of relief reading this, maybe calm your nerves a bit or at the very least, be a fun read :)
+<!--If you are reading this, either you are really tensed about the intern season or are really bored and have nothing else to do. I remember reading blogs in the summer before my second year and was relieved to find some relatable people. I hope you find a similar kind of relief reading this, maybe calm your nerves a bit or at the very least, be a fun read :)
 
 *(As this is my personal blog, this won't be completely about how to get a core intern so feel free to skip to the parts marked with a **.)*    
 
 ---
 ## Background
 
-More than half of my coaching was online due to covid. I had no real interest in engineering but was forced down this path because my brother tried this before. I had genuine interest in chemistry, organic especially due it being intuitive. I particularly struggled with Electrodynamics or anything even remotely related to EE. Fast forward to choosing my branch at IITB, I just went with whatever was the highest branch I could get. Now naive 2023 me had absolutely no idea what kind of decision that was or what he was getting himself into.
+More than half of my coaching was online due to covid. I had no real interest in engineering but was forced down this path because my brother tried this before. I had genuine interest in chemistry, organic especially due to it being intuitive. I particularly struggled with Electrodynamics or anything even remotely related to EE. Fast forward to choosing my branch at IITB, I just went with whatever was the highest branch I could get. Naive 2023 me had absolutely no idea what kind of decision that was or what he was getting himself into.
 
 **Early Insti** 
 
@@ -36,7 +36,7 @@ Maybe I didn't give it enough time, but I quickly made it a part time intern bec
 
 <!-- I cannot imagine myself working a corporate job, a 9-5 everyday and live a monotonous un-happening life. I am still not sure how I can avoid that but that's a problem for future me.    -->
 
-## 'tis the damn season
+<!--## 'tis the damn season
 
 I started updating my second year resume late in the summer, barely managing to fill 2 pages. Again through elimination I rejected all the profiles that I could not possibly get or even sit for. This left me with just core, so I focused on Digital and Signal domains (most companies don't even open for DD, but EE core prefers DD). I figured I needed to give corporate a better chance and hopefully a big company with an intern program would do a better job of representing what corporate is like. I was hoping I would get TI as they give a PPO directly and you can do whatever in your 4th year.
 
@@ -79,4 +79,4 @@ Will update it once I actually do the intern.
 
 ## Closing Remarks
 
-If you read the whole thing, thanks man (maybe I should do more of this?) and all the best for your intern season! This was inspired by and an adaptation of [Adway Girish's Blog](https://adwaygirish.github.io/blogs/7-21_intern). Feel free to hit me up, I will be glad to help.  
+If you read the whole thing, thanks man (maybe I should do more of this?) and all the best for your intern season! This was inspired by and an adaptation of [Adway Girish's Blog](https://adwaygirish.github.io/blogs/7-21_intern). Feel free to hit me up, I will be glad to help.   -->
